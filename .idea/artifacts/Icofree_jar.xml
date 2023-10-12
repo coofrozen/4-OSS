@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Icofree:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Icofree_jar</output-path>
+    <root id="archive" name="Icofree.jar">
+      <element id="module-output" name="Icofree" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jcraft/jsch/0.1.53/jsch-0.1.53.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
