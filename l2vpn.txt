@@ -1,0 +1,4 @@
+terminal length 0
+sho pw
+sho running-config l2vpn
+exit

@@ -25,13 +25,13 @@ public class InterfaceDesc {
             System.out.println("Connected");
             ChannelShell channel = (ChannelShell) session.openChannel("shell");
             LocalDate Lt = LocalDate.now();
-            String ipath = "E:\\IFOROSS\\INTERFACE_DESC\\";
+            String ipath = "D:\\IFOROSS\\INTERFACE_DESC\\";
 //            create a directory to put the files into
             File my_dir = new File(ipath+Lt);
             // tries to create a new directory
             boolean value = my_dir.mkdir();
 //            block for the execution file
-            String filename = "INTERFACE_DESC_"+reg+".txt";
+            String filename = "INTERFACE_DESC_"+me+"_"+reg+".txt";
             File file = new File(ipath+Lt+"\\"+filename);
             PrintStream printStream = new PrintStream(new FileOutputStream(file));
             System.setOut(printStream);

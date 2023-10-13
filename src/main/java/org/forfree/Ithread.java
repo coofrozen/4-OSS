@@ -14,6 +14,8 @@ public class Ithread extends Thread {
     VRF vrf = new VRF();
     VRFDetail vrfd = new VRFDetail();
 
+    BGP bgp = new BGP();
+
 
 
     public Ithread(String pe_ip, String pe_name) {
@@ -32,6 +34,6 @@ public class Ithread extends Thread {
         vbui.executeIt(pe_ip, pe_name);
         vrf.executeIt(pe_ip, pe_name);
         vrfd.executeIt(pe_ip, pe_name);
+        bgp.executeIt(pe_ip, pe_name);
     }
-
 }

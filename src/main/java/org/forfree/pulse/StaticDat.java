@@ -25,13 +25,13 @@ public class StaticDat {
             System.out.println("Connected");
             ChannelShell channel = (ChannelShell) session.openChannel("shell");
             LocalDate Lt = LocalDate.now();
-            String ipath = "E:\\IFOROSS\\STATIC\\";
+            String ipath = "D:\\IFOROSS\\STATIC\\";
 //            create a directory to put the files into
             File my_dir = new File(ipath+Lt);
             // tries to create a new directory
             boolean value = my_dir.mkdir();
 //            block for the execution file
-            String filename = "STATIC_"+reg+".txt";
+            String filename = "STATIC_"+me+"_"+reg+".txt";
             File file = new File(ipath+Lt+"\\"+filename);
             PrintStream printStream = new PrintStream(new FileOutputStream(file));
             System.setOut(printStream);

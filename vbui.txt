@@ -1,0 +1,3 @@
+terminal length 0
+sho running-config ip-host
+exit

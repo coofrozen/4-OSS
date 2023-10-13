@@ -25,7 +25,7 @@ public class BGP {
             System.out.println("Connected");
             ChannelShell channel = (ChannelShell) session.openChannel("shell");
             LocalDate Lt = LocalDate.now();
-            String ipath = "E:\\IFOROSS\\BGP\\";
+            String ipath = "D:\\IFOROSS\\BGP\\";
 //            create a directory to put the files into
             File my_dir = new File(ipath+Lt);
             // tries to create a new directory

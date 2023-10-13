@@ -1,0 +1,6 @@
+terminal length 0
+sho running-config if-intf
+sho running-config vlan
+sho running-config car
+sho running-config vrrp
+exit
