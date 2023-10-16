@@ -16,6 +16,9 @@ public class Ithread extends Thread {
 
     BGP bgp = new BGP();
 
+    FTPTransfer ftp = new FTPTransfer();
+
+
 
 
     public Ithread(String pe_ip, String pe_name) {
@@ -35,5 +38,6 @@ public class Ithread extends Thread {
         vrf.executeIt(pe_ip, pe_name);
         vrfd.executeIt(pe_ip, pe_name);
         bgp.executeIt(pe_ip, pe_name);
+        ftp.sendIt();
     }
 }

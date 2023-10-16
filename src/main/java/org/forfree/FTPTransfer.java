@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 
 import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
@@ -29,14 +28,15 @@ public class FTPTransfer {
             // APPROACH #1: uploads first file using an InputStream
             File firstLocalFile = new File("D:/ZTE_COMMANDS.xlsx");
 
-            String remoteParentDir = "IFOROSS";
+            String remoteDirPath = "";
+
             String[] dirs = {"BGP","INTERFACE_DATA","INTERFACE_DESC","L2VPN","STATIC","VBUI","VRF","VRF_DETAIL"};
 
             for(int l=0;l<dirs.length;l++) {
                 String localParentDir = "D:\\IFOROSS\\"+dirs[l]+"\\";
-                uploadDirectory(ftpClient,dirs[l],localParentDir,remoteParentDir);
+                String remoteParentDir = "IFOROSS\\"+dirs[l]+"\\";
+                uploadDirectory(ftpClient,remoteDirPath,localParentDir,remoteParentDir);
             }
-
 
         } catch (IOException ex) {
             System.out.println("Error: " + ex.getMessage());

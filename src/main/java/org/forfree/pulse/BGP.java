@@ -14,16 +14,18 @@ public class BGP {
         String host = "ethiopsmssh.ethio.local";
         String user = "ethio15374@ipngnlogonrw@"+me;
         String password = "aJFTdA9bAKGhWLL";
+        Session session = null;
+        ChannelShell channel = null;
         try {
             Properties config = new Properties();
             config.put("StrictHostKeyChecking", "no");
             JSch jsch = new JSch();
-            Session session = jsch.getSession(user, host, 22);
+            session = jsch.getSession(user, host, 22);
             session.setPassword(password);
             session.setConfig(config);
             session.connect();
             System.out.println("Connected");
-            ChannelShell channel = (ChannelShell) session.openChannel("shell");
+            channel = (ChannelShell) session.openChannel("shell");
             LocalDate Lt = LocalDate.now();
             String ipath = "D:\\IFOROSS\\BGP\\";
 //            create a directory to put the files into
@@ -57,6 +59,17 @@ public class BGP {
         }catch (Exception e) {
             e.printStackTrace();
         }
+//        finally {
+//            try {
+//                if (session.isConnected()) {
+//                    session.disconnect();
+//                    channel.disconnect();
+//                    System.out.println("disconnected");
+//                }
+//            } catch (Exception ex) {
+//                ex.printStackTrace();
+//            }
+//        }
     }
 
     public File createShellScript() {
@@ -75,6 +88,7 @@ public class BGP {
         }catch (Exception e){//Catch exception if any
             System.err.println("Error: " + e.getMessage());
         }
+
         return fstream;
 
     }

@@ -10,20 +10,25 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class StaticDat {
+
+    Session session = null;
+    ChannelShell channel = null;
+
     public void executeIt(String me,String reg) {
         String host = "ethiopsmssh.ethio.local";
         String user = "ethio15374@ipngnlogonrw@"+me;
         String password = "aJFTdA9bAKGhWLL";
+
         try {
             Properties config = new Properties();
             config.put("StrictHostKeyChecking", "no");
             JSch jsch = new JSch();
-            Session session = jsch.getSession(user, host, 22);
+            session = jsch.getSession(user, host, 22);
             session.setPassword(password);
             session.setConfig(config);
             session.connect();
             System.out.println("Connected");
-            ChannelShell channel = (ChannelShell) session.openChannel("shell");
+            channel = (ChannelShell) session.openChannel("shell");
             LocalDate Lt = LocalDate.now();
             String ipath = "D:\\IFOROSS\\STATIC\\";
 //            create a directory to put the files into
@@ -58,7 +63,6 @@ public class StaticDat {
             e.printStackTrace();
         }
     }
-
     public File createShellScript() {
         String filename = "static.txt";
         File fstream = new File(filename);
@@ -78,6 +82,5 @@ public class StaticDat {
         return fstream;
 
     }
-
 
 }
