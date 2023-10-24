@@ -1,0 +1,12 @@
+org\forfree\pulse\StaticDat.class
+org\forfree\Ithread.class
+org\forfree\pulse\L2VPN.class
+org\forfree\SFTPTransfer.class
+org\forfree\Main.class
+org\forfree\pulse\BGP.class
+org\forfree\pulse\InterfaceData.class
+org\forfree\pulse\InterfaceDesc.class
+org\forfree\pulse\VRF.class
+org\forfree\pulse\VRFDetail.class
+org\forfree\FTPTransfer.class
+org\forfree\pulse\Vbui.class

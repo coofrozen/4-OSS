@@ -11,22 +11,18 @@ import org.apache.commons.net.ftp.FTPClient;
 
 public class FTPTransfer {
     public void sendIt(){
-        String server = "10.183.50.15";//10.180.8.133
+        String server = "10.180.8.133";//10.180.8.133
         int port = 21;
-        String user = "CIRT";
-        String pass = "Madre@21";
+        String user = "ftprw";
+        String pass = "Efoy@1921";
 
         FTPClient ftpClient = new FTPClient();
         try {
-
             ftpClient.connect(server, port);
             ftpClient.login(user, pass);
             ftpClient.enterLocalPassiveMode();
 
             ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
-
-            // APPROACH #1: uploads first file using an InputStream
-            File firstLocalFile = new File("D:/ZTE_COMMANDS.xlsx");
 
             String remoteDirPath = "";
 
@@ -34,7 +30,7 @@ public class FTPTransfer {
 
             for(int l=0;l<dirs.length;l++) {
                 String localParentDir = "D:\\IFOROSS\\"+dirs[l]+"\\";
-                String remoteParentDir = "IFOROSS\\"+dirs[l]+"\\";
+                String remoteParentDir = "var/efoyoss/IFOROSS/"+dirs[l];
                 uploadDirectory(ftpClient,remoteDirPath,localParentDir,remoteParentDir);
             }
 

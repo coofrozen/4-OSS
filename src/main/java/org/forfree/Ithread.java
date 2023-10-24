@@ -30,14 +30,14 @@ public class Ithread extends Thread {
 
     @Override
     public void run() {
-        id.executeIt(pe_ip, pe_name);
-        id2.executeIt(pe_ip, pe_name);
-        l2.executeIt(pe_ip, pe_name);
-        st.executeIt(pe_ip, pe_name);
-        vbui.executeIt(pe_ip, pe_name);
-        vrf.executeIt(pe_ip, pe_name);
-        vrfd.executeIt(pe_ip, pe_name);
-        bgp.executeIt(pe_ip, pe_name);
-        ftp.sendIt();
+//        id.executeIt(pe_ip, pe_name);
+//        id2.executeIt(pe_ip, pe_name);
+//        l2.executeIt(pe_ip, pe_name);
+//        st.executeIt(pe_ip, pe_name);
+//        vbui.executeIt(pe_ip, pe_name);
+//        vrf.executeIt(pe_ip, pe_name);
+//        vrfd.executeIt(pe_ip, pe_name);
+//        bgp.executeIt(pe_ip, pe_name);
+
     }
 }

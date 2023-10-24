@@ -59,17 +59,6 @@ public class BGP {
         }catch (Exception e) {
             e.printStackTrace();
         }
-//        finally {
-//            try {
-//                if (session.isConnected()) {
-//                    session.disconnect();
-//                    channel.disconnect();
-//                    System.out.println("disconnected");
-//                }
-//            } catch (Exception ex) {
-//                ex.printStackTrace();
-//            }
-//        }
     }
 
     public File createShellScript() {
